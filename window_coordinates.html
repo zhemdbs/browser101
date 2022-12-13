@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>브라우저 좌표</title>
+  <style>
+    .buttonBox {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+    div {width: 200px; height: 200px; margin: 5px; border-radius: 5px; background-color: blanchedalmond;}
+  </style>
+</head>
+<body style="background-color: black; position: relative;">
+  <aside class="buttonBox">
+    <button type="button" class="byScroll">Scroll by 100px(y)</button>
+    <button type="button" class="toScroll">Scroll to 100px(y)</button>
+    <button type="button" class="intoSpecial">Scroll into special</button>
+  </aside>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div style="background-color: coral;" class="special"></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <script>
+    const special = document.querySelector('.special');
+    const byScroll = document.querySelector('.byScroll');
+    const toScroll = document.querySelector('.toScroll');
+    const intoSpecial = document.querySelector('.intoSpecial');
+    byScroll.addEventListener('click', (e)=> {
+      window.scrollBy(0, 100);
+    })
+    toScroll.addEventListener('click', (e)=> {
+      window.scrollTo(0, 100);
+    })
+    intoSpecial.addEventListener('click', (e)=> {
+      special.scrollIntoView();
+    })
+    special.addEventListener('click', (e)=>{
+      console.log(special.getBoundingClientRect());
+      console.log('client', e.clientX, e.clientY);
+      console.log('page', e.pageX, e.pageY);
+    });
+  </script>
+</body>
+</html>

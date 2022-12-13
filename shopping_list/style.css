@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'establishRoomNo703OTF';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRoomNo703OTF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #F0E5DE;
+  font-family: 'establishRoomNo703OTF';
+}
+
+.shopping_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 650px;
+  border-radius: 30px;
+  background-color: #7C7877;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.title {
+  padding: 15px 0 10px;
+  color: #ABD0CE;
+  letter-spacing: 2px;
+}
+
+.shopping_wrap {
+  position: relative;
+  background-color: #D9D4CF;
+  width: 100%;
+  height: 500px;
+}
+.shopping_list {
+  padding: 10px;
+}
+.shopping_list > li {
+  padding: 5px 0;
+  font-size: 25px;
+  list-style: none;
+  text-align: start;
+}
+.shopping_list > li > .delItem {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  padding: 4px;
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.shopping_input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  border: none;
+  outline: none;
+}
+
+.addBtn {
+  width: 60px;
+  height: 60px;
+  margin: 12px 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.addBtn > img {
+  width: 100%;
+  height: 100%;
+}

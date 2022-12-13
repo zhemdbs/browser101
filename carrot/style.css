@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.blind {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  font-size: 1px;
+  line-height: 1px;
+  clip: rect(1px,1px, 1px,1px);
+}
+
+body {
+  background: url(./img/background.png) center/cover no-repeat;
+}
+
+.gamebox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 937px;
+}
+.icon {
+  font-size: 35px;
+}
+.pop-up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  padding: 40px;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  visibility: hidden;
+}
+.replayBtn {
+  padding: 10px;
+  border: 3px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.alertText {
+  margin-top: 40px;
+  font-size: 38px;
+  color: white;
+}
+
+
+.countBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.playBtn {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border: 3px solid white;
+  border-radius: 5px;
+  background: lightsteelblue;
+  cursor: pointer;
+}
+
+.playBtn>.fa-play {
+  display: none;
+}
+
+.playBtn.controls--stop>.fa-pause {
+  display: none;
+}
+
+.playBtn.controls--stop>.fa-play {
+  display: block;
+}
+.time {
+  padding: 5px 20px;
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 50px;
+  margin: 10px 0;
+  visibility: hidden;
+}
+.countCarrot {
+  width: 75px;
+  height: 75px;
+  border: 3px solid black;
+  border-radius: 100%;
+  background-color: lightcoral;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  visibility: hidden;
+}
+
+.field {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 170px;
+}
+
+.carrot {
+  width: 80px;
+  height: 80px;
+  background: url(./img/carrot.png) center/cover no-repeat;
+}
+.bug {
+  width: 50px;
+  height: 50px;
+  background: url(./img/bug.png) center/cover no-repeat;
+}
+
+.carrot:hover,
+.bug:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}

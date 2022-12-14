@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윈도우 사이즈표기</title>
+</head>
+<body style="margin: 0; padding:0;">
+    <div class="tag" style="background-color: lightblue; width: 500px; padding: 10px 0">
+        Window Size
+        <!-- <p class="screen">window.screen : <span style="font-weight: bold;"></span></p>
+        <p class="outer">window.outer : <span style="font-weight: bold;"></span></p>
+        <p class="inner">window.inner : <span style="font-weight: bold;"></span></p>
+        <p class="clientWidth">documentElement.clientWidth : <span style="font-weight: bold;"></span></p> -->
+    </div>
+    <script>
+        const tag = document.querySelector('.tag');
+        // const screenWidth = document.querySelector('.screen > span');
+        // const outerWidth = document.querySelector('.outer > span');
+        // const innerWidth = document.querySelector('.inner > span');
+        // const clientWidth = document.querySelector('.clientWidth > span');
+
+        function updateTag() {
+            tag.innerHTML = `
+            window.screen : ${window.screen.width}, ${window.screen.height} <br/>
+            window.outer : ${window.outerWidth}, ${window.outerHeight} <br/>
+            window.inner : ${window.innerWidth}, ${window.innerHeight} <br/>
+            window.clientWidth : ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}
+            `
+        }
+
+        window.addEventListener('resize', () => {
+            updateTag();
+            // screenWidth.innerHTML = window.screen.width + ' , ' + window.screen.height;
+            // outerWidth.innerHTML = window.outerWidth + ' , ' + window.outerHeight;
+            // innerWidth.innerHTML = window.innerWidth + ' , ' + window.innerHeight;
+            // clientWidth.innerHTML = document.documentElement.clientWidth + ' , ' + document.documentElement.clientHeight;
+        })
+        updateTag();
+    </script>
+</body>
+</html>
